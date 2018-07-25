@@ -1,10 +1,6 @@
 <div align="center">
   <img width="200" height="200"
     src="https://cdn.worldvectorlogo.com/logos/circleci.svg">
-  <a href="https://github.com/easymetrics">
-    <img width="200" height="200" vspace="" hspace="25"
-      src="https://cdn.worldvectorlogo.com/logos/easymetrics-inc.svg">
-  </a>
   <h1>CircleCI 2.0 Node 8.2 Build container</h1>
   <p>Docker Repository for the EasyMetrics NodeJS CircleCI build & deployment Image.<p>
 </div>
@@ -13,7 +9,7 @@
 ```bash
 # config.yml
     docker:
-      - image: easymetrics/circleci-gcp-node8
+      - image: javierjara/php-circleci-gcloud
 ```
 
 Essentially it's circleci/node:8.2.0 + NVM + Google Cloud SDK. The SDK is not initialized in this build, that is done during the CI run using secure environment variables ( see the [gpc docs](https://circleci.com/docs/2.0/google-container-engine/) ).
